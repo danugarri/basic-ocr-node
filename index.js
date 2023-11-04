@@ -1,4 +1,5 @@
 const Tesseract = require('tesseract.js');
+const { PromiseRejected } = require('./error');
 
 const config = {
   path: 'https://tesseract.projectnaptha.com/img/eng_bw.png',
@@ -16,7 +17,7 @@ const getText = async () => {
     console.log(text);
     return text;
   } catch (e) {
-    throw new Error('Something went wrong during the process');
+    throw new PromiseRejected('Something went wrong during the process');
   }
 };
 

@@ -1,4 +1,5 @@
 const { getText } = require('.');
+const { PromiseRejected } = require('./error');
 
 const mockedText = 'Texto obtenido correctamente';
 const mockedRecognize = jest.fn(() => ({ data: { text: mockedText } }));
@@ -14,8 +15,14 @@ describe('The getText function', () => {
   });
   test('should throw an error if the process fails', async () => {
     mockedRecognize.mockImplementationOnce(() => {
-      throw new Error('Failed to recognize');
+      throw new PromiseRejected();
     });
     await expect(getText()).rejects.toThrow('Something went wrong during the process');
+  });
+  test('should throw an error of the PromiseRejected type', async () => {
+    mockedRecognize.mockImplementationOnce(() => {
+      throw new PromiseRejected();
+    });
+    await expect(getText()).rejects.toThrow(PromiseRejected);
   });
 });
