@@ -15,6 +15,5 @@ const getText = async () => {
   console.log(text);
   return text;
 };
-getText();
 
 module.exports = { getText };

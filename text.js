@@ -1,0 +1,3 @@
+const { getText } = require('.');
+
+getText();
