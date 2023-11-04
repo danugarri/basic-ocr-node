@@ -12,4 +12,10 @@ describe('The getText function', () => {
   test('should log the text from the specified image', async () => {
     await expect(getText()).resolves.toBe(mockedText);
   });
+  test('should throw an error if the process fails', async () => {
+    mockedRecognize.mockImplementationOnce(() => {
+      throw new Error('Failed to recognize');
+    });
+    await expect(getText()).rejects.toThrow('Something went wrong during the process');
+  });
 });

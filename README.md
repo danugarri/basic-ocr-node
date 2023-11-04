@@ -1,5 +1,5 @@
 # To Execute the script:
 
 ```bash
-node index.js
+node text.js
 ```

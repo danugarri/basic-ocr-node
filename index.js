@@ -9,11 +9,15 @@ const config = {
 };
 
 const getText = async () => {
-  const {
-    data: { text },
-  } = await Tesseract.recognize(config.path, config.language, config.options);
-  console.log(text);
-  return text;
+  try {
+    const {
+      data: { text },
+    } = await Tesseract.recognize(config.path, config.language, config.options);
+    console.log(text);
+    return text;
+  } catch (e) {
+    throw new Error('Something went wrong during the process');
+  }
 };
 
 module.exports = { getText };
