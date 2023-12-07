@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage --testResultsProcessor ./node_modules/jest-html-reporter",
-    "sonar": "jest --ci --coverage --testResultsProcessor ./node_modules/jest-sonar-reporter"
+    "sonar": "jest --ci --coverage"
   },
   "jest": {
     "testEnvironment": "node",
