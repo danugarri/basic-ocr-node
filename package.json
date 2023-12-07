@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "sonar": "jest --ci --coverage --testLocation ./coverage --testResultsProcessor ./node_modules/jest-sonar-reporter"
+    "sonar": "jest --ci --coverage --testResultsProcessor ./node_modules/jest-sonar-reporter"
   },
   "jest": {
     "testEnvironment": "node",
