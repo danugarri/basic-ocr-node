@@ -10,7 +10,7 @@
   "jest": {
     "testEnvironment": "node",
     "testRegex": "(.*/.*\\.test\\.[jt]sx?)$",
-    "testResultsProcessor": "./node_modules/jest-sonar-reporter",
+    "testResultsProcessor": "./node_modules/jest-html-reporter",
     "coverageDirectory": "coverage",
     "moduleFileExtensions": [
       "ts",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "jest-sonar-reporter": "^2.0.0",
     "prettier": "^3.0.3"
   }
