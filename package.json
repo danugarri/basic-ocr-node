@@ -12,7 +12,6 @@
     "testEnvironment": "node",
     "testRegex": "(.*/.*\\.test\\.[jt]sx?)$",
     "testResultsProcessor": "./node_modules/jest-sonar-reporter",
-    "coverageDirectory": "coverage",
     "moduleFileExtensions": [
       "ts",
       "tsx",
