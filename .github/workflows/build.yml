@@ -7,7 +7,7 @@ on:
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
-
+    environment: Sonar cloud # Imperative to recognize the secrets
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
